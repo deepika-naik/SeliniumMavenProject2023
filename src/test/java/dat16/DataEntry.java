@@ -1,0 +1,45 @@
+package dat16;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
+
+public class DataEntry {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+File src=new File(".\\src\\test\\resources\\DataSheet3.xlsx");
+FileInputStream stream= new FileInputStream (src);
+
+XSSFWorkbook wb=new XSSFWorkbook(stream);
+XSSFSheet sh=wb.getSheet("manju");
+
+
+DataFormatter data=new DataFormatter();
+System.out.println(data.formatCellValue(sh.getRow(0).getCell(0)));
+System.out.println(data.formatCellValue(sh.getRow(1).getCell(0)));
+
+System.out.println(sh.getLastRowNum());
+System.out.println(sh.getRow(0).getLastCellNum());
+System.out.println(sh.getRow(1).getLastCellNum());
+for( int i=0;i<=sh.getLastRowNum();i++)
+{
+System.out.println(sh.getRow(i).getCell(0));
+	}
+System.out.println("abcd");
+
+for( int i=0;i<=sh.getLastRowNum();i++) {
+	int cellCount=sh.getRow(i).getLastCellNum();
+	for(int j=0;j<cellCount;j++)
+	{
+		System.out.println(data.formatCellValue(sh.getRow(i).getCell(j)));
+	}
+}
+
+}}

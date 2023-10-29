@@ -10,7 +10,7 @@ public class Project extends Framework {
 		typeIn("//input[@name='firstName']", "testA","firstName");
 		typeIn("//input[@name='lastName']", "testA","lastName");
 		clickIn("//input[@type='checkbox']","showPassword");
-		clearAll("//input[@name='firstName']","firstName");
+		
 		endTest();
 		endReport();
 	}

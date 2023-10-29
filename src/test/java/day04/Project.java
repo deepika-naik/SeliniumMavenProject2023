@@ -5,7 +5,7 @@ public class Project extends Framework {
 	public static void main(String[] args) throws Exception {
 		startReport("demoapplication");
 		startTest("demo", "testing application");
-		browser("edge");
+		browser("chrome");
 		appUrl("https://accounts.google.com/signup");
 		typeIn("firstName");
 		typeIn("lastName");

@@ -22,7 +22,7 @@ public class Program02 {
 			File src = new File(".\\src\\test\\resources\\DataSheet.xlsx");
 			FileInputStream stream = new FileInputStream(src);
 			XSSFWorkbook wb = new XSSFWorkbook(stream);
-			XSSFSheet sh = wb.getSheet("demo");
+			XSSFSheet sh = wb.getSheet("deepa");
 			DataFormatter data = new DataFormatter();
 
 			for(int i=1;i<=sh.getLastRowNum();i++)
@@ -40,7 +40,7 @@ public class Program02 {
 			File src = new File(".\\src\\test\\resources\\DataSheet.xlsx");
 			FileInputStream stream = new FileInputStream(src);
 			XSSFWorkbook wb = new XSSFWorkbook(stream);
-			XSSFSheet sh = wb.getSheet("demo");
+			XSSFSheet sh = wb.getSheet("deepa");
 			DataFormatter data = new DataFormatter();
 
 			for(int i=1;i<=sh.getLastRowNum();i++)
